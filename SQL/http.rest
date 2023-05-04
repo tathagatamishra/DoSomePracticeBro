@@ -1,0 +1,24 @@
+POST http://localhost:3000/create-task
+content-type: application/json
+
+{
+    "task": "New Task",
+    "description": "It is a new task"
+}
+
+
+GET http://localhost:3000/get-all
+content-type: application/json
+
+# DELETE http://localhost:3000/delete/4
+# content-type: application/json
+
+
+# PUT http://localhost:3000/update/6
+# content-type: application/json
+
+# {
+#     "title": "maditation",
+#     "description": "Yogostha Kuru karmani, Sangam tyatta dhananjaya",
+#     "author": "Arjuna"
+# }
