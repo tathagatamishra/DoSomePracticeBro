@@ -84,28 +84,28 @@
           if (size === 0) {
             return;
           }
-          this.x = this.x 
-          this.y = this.y 
+          this.x = this.x * (1 / size);
+          this.y = this.y * (1 / size);
         }
         //最大値
         limit(max) {
           if (this.x > max) {
             this.x = max;
           }
-          if (this.x * 10 > max) {
-            this.x = max * 10;
+          if (this.x * -1 > max) {
+            this.x = max * -1;
           }
           if (this.y > max) {
             this.y = max;
           }
-          if (this.y * 10 > max) {
-            this.y = max * 10;
+          if (this.y * -1 > max) {
+            this.y = max * -1;
           }
         }
         //長さ１のランダムな値を返す
         random2D() {
-          this.x = Math.random() * 2 - .1;
-          this.y = Math.random() * 2 - .1;
+          this.x = Math.random() * 2 - 1;
+          this.y = Math.random() * 2 - 1;
           return this.normalize();
         }
         //同じ値をもったVectorを返す
@@ -121,11 +121,11 @@
           this.acceleration = new Vector(0, 0);
           this.vLocation = new Vector(centerX, centerY);
           this.maxSpeed = 8;
-          this.maxSeek = 2;
+          this.maxSeek = 0.2;
           this.angle = 0;
           this.fillColor = "rgb(68,112,153)";
           this.trail = [];
-          this.trailLength = 1;
+          this.trailLength = 100;
           this.setUpTrail();
         }
         //尻尾を初期化

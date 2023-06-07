@@ -1,8 +1,8 @@
 .App {
   height: 100vh;
-
+  position: absolute;
   box-sizing: border-box;
 
-  background: rgb(249, 255, 238);
-  border: solid 30px lightskyblue;
+  /* background: rgb(249, 255, 238); */
+  /* border: solid 30px lightskyblue; */
 }
