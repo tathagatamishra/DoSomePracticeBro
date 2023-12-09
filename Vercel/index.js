@@ -5,7 +5,7 @@ const cors = require('cors');
 const Mainroutes = require('./routes/routes')
 const errorHandler = require('./utils/errorHandler');
 
-require("./config/db/connection")
+require("./config/db")
 
 const app = express();
 
