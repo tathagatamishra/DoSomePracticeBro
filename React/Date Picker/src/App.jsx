@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
 
   return <div>
-    <input type="date" name="" id="" />
+    <input type="month" name="" id="" />
   </div>;
 }
 
