@@ -25,7 +25,7 @@ function App() {
   }, [minDate]);
 
   return (
-    <div className="flex flex-row gap-2 justify-center items-center mr-[2px]">
+    <div className="box">
       <input
         className="text-[14px] font-[700] m-0 px-[10px] py-[5px] w-[160px] flex flex-row justify-center items-center rounded-[8px]"
         defaultValue={date}
