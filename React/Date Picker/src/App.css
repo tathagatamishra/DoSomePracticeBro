@@ -59,13 +59,13 @@ input[type="month"]:focus {
   right: 0;
   bottom: 0;
   transform: translateX(20%);
-  z-index: 10;
+  z-index: 10 !important;
 
   opacity: 100;
   cursor: pointer;
 
   color: rgba(0, 120, 250, 1);
-  background: rgb(193, 83, 83);
+  background: rgb(193, 83, 83) !important;
 
 }
 
