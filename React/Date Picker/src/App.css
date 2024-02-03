@@ -39,11 +39,11 @@ input[type="month"]:focus {
 ::-webkit-datetime-edit-month-field:hover,
 ::-webkit-datetime-edit-day-field:hover,
 ::-webkit-datetime-edit-year-field:hover {
-  background: rgba(0, 120, 250, 0.1);
+  background: rgb(250, 0, 0);
 }
 
 ::-webkit-datetime-edit-text {
-  opacity: 0;
+  opacity: 100%;
 }
 
 ::-webkit-clear-button,
@@ -53,24 +53,26 @@ input[type="month"]:focus {
 
 ::-webkit-calendar-picker-indicator {
   position: absolute;
-  width: 2.5rem;
+  width: 4rem;
   height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
+  transform: translateX(20%);
+  z-index: 10;
 
-  opacity: 0;
+  opacity: 100;
   cursor: pointer;
 
   color: rgba(0, 120, 250, 1);
-  background: rgba(0, 120, 250, 1);
+  background: rgb(193, 83, 83);
 
 }
 
-input[type="month"]:hover::-webkit-calendar-picker-indicator {
-  opacity: 0.05;
+/* input[type="month"]:hover::-webkit-calendar-picker-indicator {
+  opacity: 100%;
 }
 
 input[type="month"]:hover::-webkit-calendar-picker-indicator:hover {
-  opacity: 0.15;
-}
+  opacity: 100%;
+} */
