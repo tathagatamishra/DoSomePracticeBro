@@ -9,6 +9,24 @@
   text-align: center;
 }
 
+.box {
+  border: 1px solid;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.overlay {
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
+  position: absolute;
+  background: dodgerblue;
+  z-index: 10;
+}
+
 
 input[type="month"] {
   display: block;
@@ -59,7 +77,6 @@ input[type="month"]:focus {
   right: 0;
   bottom: 0;
   transform: translateX(20%);
-  z-index: 10 !important;
 
   opacity: 100;
   cursor: pointer;
