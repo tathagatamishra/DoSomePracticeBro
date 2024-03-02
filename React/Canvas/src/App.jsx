@@ -1,13 +1,28 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import html2canvas from "html2canvas";
-import img from "./logo.png";
+import img2 from './1763.jpg'
 
 function App() {
   const htmlContentRef = useRef(null);
+  const [imageData, setImageData] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImageData(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleDownloadClick = () => {
     html2canvas(htmlContentRef.current, {
-      scale: 10, backgroundColor: null // Fixed scale factor to maintain consistent resolution
+      scale: 10,
+      backgroundColor: null,
     }).then((canvas) => {
       const imageData = canvas.toDataURL('image/jpeg');
       const newData = imageData.replace(/^data:image\/jpeg/, 'data:application/octet-stream');
@@ -31,12 +46,20 @@ function App() {
           height: "200px",
         }}
       >
-        <img style={{width: '20px', height: '20px'}} src={img} />
-        <h1>{text}</h1>
+        <img src={img2} style={{
+          background: "rgb(230, 173, 173)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "300px",
+          height: "200px",
+          zIndex: '0'
+        }} />
+        {imageData && <img style={{ width: '48px', height: '48px', zIndex: '1', position: 'absolute' }} src={imageData} alt="Uploaded" />}
+        <h1>gg</h1>
       </div>
+      <input type="file" onChange={handleImageUpload} />
       <button onClick={handleDownloadClick}>Download</button>
-      <input type="text" />
-      <button>ok</button>
     </div>
   );
 }
